@@ -13,3 +13,4 @@ AWS_SECRET_ACCESS_KEY=your_aws_secret
 AZURE_SUBSCRIPTION_ID=your_azure_id
 MONGO_URI=mongodb://mongo:27017/devops_dashboard
 ```
+Make sure .env is included in .gitignore to avoid pushing credentials to GitHub.
