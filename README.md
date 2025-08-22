@@ -95,7 +95,7 @@ a specific monitoring requirement:
 -   **Why it matters:** Helps pinpoint the most expensive service
     deployments in specific regions (e.g., *Amazon EC2 in us-east-1*).
 
-### 4. **AWS Daily Total Spend (All Services, All Regions)**
+### 4. **AWS Daily Total Spend (All Services, All Regions) (\$)**
 
 -   **Purpose:** Shows the **day-by-day trend of total amortized costs**
     across AWS.
@@ -103,28 +103,28 @@ a specific monitoring requirement:
     spikes), monitor long-term trends, and correlate cost changes with
     deployments or scaling events.
 
-### 5. **Top 5 Regions by Cost (Bar Chart)**
+### 5. **Top 5 Regions by Cost (\$)**
 
 -   **Purpose:** Shows the five AWS regions with the highest amortized
     cost.
 -   **Why it matters:** Quickly identifies where the majority of
     spending occurs geographically.
 
-### 6. **Top 5 Services by Cost (Bar Chart)**
+### 6. **Top 5 Services by Cost (\$)**
 
 -   **Purpose:** Highlights the five AWS services contributing most to
     overall costs.
 -   **Why it matters:** Helps teams focus on the services driving the
     largest portion of spend.
 
-### 7. **Daily Comparison: Amortized vs Blended vs Unblended Cost (Multi-line Time Series)**
+### 7. **AWS Daily Total Cost Comparison (Amortized vs Blended vs Unblended) (\$)**
 
 -   **Purpose:** Compares daily totals across different AWS billing
     models.
 -   **Why it matters:** Provides financial insight for reconciling AWS
     invoices and understanding billing differences.
 
-### 8. **Usage Quantity by Service (Time Series)**
+### 8. **Usage Quantity by Service **
 
 -   **Purpose:** Tracks daily usage quantities for each AWS service.
 -   **Why it matters:** Links resource consumption to costs, helping
