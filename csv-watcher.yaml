@@ -1,0 +1,58 @@
+# -------------------------------
+# AWS Credentials Secret
+# -------------------------------
+apiVersion: v1
+kind: Secret
+metadata:
+  name: aws-credentials
+  namespace: monitoring
+type: Opaque
+stringData:
+  access_key: AKIA6GBMCU7ZAIDSG7TB
+  secret_key: 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
+
+# -------------------------------
+# CSV Watcher Deployment
+# -------------------------------
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: csv-watcher
+  namespace: monitoring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: csv-watcher
+  template:
+    metadata:
+      labels:
+        app: csv-watcher
+    spec:
+      containers:
+        - name: csv-watcher
+          image: tanujbhatia24/csv-watcher:latest
+          env:
+            # AWS credentials
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: aws-credentials
+                  key: access_key
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: aws-credentials
+                  key: secret_key
+
+            # InfluxDB connection
+            - name: INFLUX_URL
+              value: "http://influxdb.monitoring.svc.cluster.local:8086"
+            - name: INFLUX_TOKEN
+              value: "admin123admin"
+            - name: INFLUX_ORG
+              value: "my_org"
+            - name: INFLUX_BUCKET
+              value: "cost_data"
+      restartPolicy: Always

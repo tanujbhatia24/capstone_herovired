@@ -1,0 +1,1 @@
+sudo CHANGE_MINIKUBE_NONE_USER=true minikube start --driver=none --container-runtime=containerd --force

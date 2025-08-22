@@ -1,0 +1,103 @@
+# -------------------------------
+# Namespace Definition
+# -------------------------------
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: monitoring
+# -------------------------------
+# InfluxDB Persistent Volume
+# -------------------------------
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: influxdb-pv
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:             # in Minikube this is a local path
+    path: /data/influxdb
+  persistentVolumeReclaimPolicy: Retain
+# -------------------------------
+# PersistentVolumeClaim for InfluxDB storage
+# -------------------------------
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: influxdb-pvc
+  namespace: monitoring
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  volumeName: influxdb-pv
+  storageClassName: ""
+# -------------------------------
+# InfluxDB Deployment
+# -------------------------------
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: influxdb
+  namespace: monitoring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: influxdb
+  template:
+    metadata:
+      labels:
+        app: influxdb
+    spec:
+      containers:
+      - name: influxdb
+        image: influxdb:2.6
+        ports:
+        - containerPort: 8086
+        env:
+        - name: DOCKER_INFLUXDB_INIT_MODE
+          value: setup
+        - name: DOCKER_INFLUXDB_INIT_USERNAME
+          value: admin
+        - name: DOCKER_INFLUXDB_INIT_PASSWORD
+          value: admin123
+        - name: DOCKER_INFLUXDB_INIT_ORG
+          value: my_org
+        - name: DOCKER_INFLUXDB_INIT_BUCKET
+          value: cost_data
+        - name: DOCKER_INFLUXDB_INIT_ADMIN_TOKEN
+          value: admin123admin
+        volumeMounts:
+        - mountPath: /var/lib/influxdb2
+          name: influxdb-storage
+      volumes:
+      - name: influxdb-storage
+        persistentVolumeClaim:
+          claimName: influxdb-pvc
+
+# -------------------------------
+# InfluxDB Service
+# -------------------------------
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: influxdb
+  namespace: monitoring
+spec:
+  selector:
+    app: influxdb
+  ports:
+    - protocol: TCP
+      port: 8086
+      targetPort: 8086
+      nodePort: 32113
+  type: LoadBalancer
