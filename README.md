@@ -215,9 +215,16 @@ launched automatically.
 
 ------------------------------------------------------------------------
 
+## Kubernetes Pods & Services
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/302e8723-279e-42d9-a5d1-605f958ac9bb" /><br>
+
 ## Sample Dashboard
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/55200667-a71c-488d-8440-8bbc49d4fc31" /><br>
 <img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/36f1d43f-7b24-401b-8f88-2fb1bac3ca00" /><br>
+
+## Sample Alerting
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/c5ca29f2-c8bd-46eb-90aa-e3f163f44e77" /><br>
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/fa7d9142-7a58-4429-ba24-fb4cc019e2e3" /><br>
 
 ------------------------------------------------------------------------
 
