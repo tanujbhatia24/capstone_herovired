@@ -73,7 +73,7 @@ The Grafana dashboard is designed to provide **clear visibility into AWS
 cost distribution, total spend, and usage trends**. Each panel addresses
 a specific monitoring requirement:
 
-### 1. **AWS COST PER REGION (\$)**
+### 1. **AWS Cost Per Region (\$)**
 
 -   **Purpose:** Highlights the total **amortized cost per AWS region**
     in the selected time range.
@@ -81,7 +81,7 @@ a specific monitoring requirement:
     highest portion of the AWS bill, enabling teams to focus on
     optimizing workloads in high-cost regions.
 
-### 2. **AWS TOTAL COST (\$)**
+### 2. **AWS Total Cost (\$)**
 
 -   **Purpose:** Displays the **global total amortized cost** across all
     AWS services and regions.
