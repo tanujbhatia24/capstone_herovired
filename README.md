@@ -124,7 +124,7 @@ a specific monitoring requirement:
 -   **Why it matters:** Provides financial insight for reconciling AWS
     invoices and understanding billing differences.
 
-### 8. **Usage Quantity by Service**
+### 8. **AWS Usage Quantity by Service**
 
 -   **Purpose:** Tracks daily usage quantities for each AWS service.
 -   **Why it matters:** Links resource consumption to costs, helping
