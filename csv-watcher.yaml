@@ -8,8 +8,8 @@ metadata:
   namespace: monitoring
 type: Opaque
 stringData:
-  access_key: AKIA6GBMCU7ZAIDSG7TB
-  secret_key: Tmh+QQTLaem0zuSBs345KWTQzYFjep/ajLyk49eU
+  access_key: Your_Access_Key
+  secret_key: Your_Secret_Access_Key
 
 # -------------------------------
 # CSV Watcher Deployment
