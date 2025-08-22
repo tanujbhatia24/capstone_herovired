@@ -215,6 +215,12 @@ launched automatically.
 
 ------------------------------------------------------------------------
 
+## Sample Dashboard
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/55200667-a71c-488d-8440-8bbc49d4fc31" /><br>
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/36f1d43f-7b24-401b-8f88-2fb1bac3ca00" /><br>
+
+------------------------------------------------------------------------
+
 ## Conclusion
 
 This project delivers a **centralized AWS cost monitoring dashboard**
