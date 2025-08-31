@@ -21,7 +21,7 @@ billing metrics.
 1.  **Aggregate AWS cost and usage data** into a central dashboard.
 2.  Provide **real-time and historical visualizations** of spend by
     region, service, and globally.
-3.  Enable **filters and drill-downs** (e.g., by service, region, date
+3.  Enable **drill-downs** (e.g., by service, region, date
     range).
 4.  Support **alerting** on anomalies (via Grafana alerts).
 
