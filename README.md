@@ -141,6 +141,7 @@ specifically for this project:
 
 This image contains the Python watcher service that ingests AWS billing
 CSVs from S3 into InfluxDB.
+Sample file - csv_wathcer.py
 
 ------------------------------------------------------------------------
 
