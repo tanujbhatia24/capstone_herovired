@@ -148,7 +148,7 @@ Sample file - csv_watcher.py
 ## Minikube Startup
 
 To simplify local testing, the repository also includes a
-**`startup.bat` script**:
+**`startup.sh` script**:
 - Automates Minikube startup on the EC2 host.
 - Ensures all required pods (Grafana, InfluxDB, csv-watcher) are
 launched automatically.
