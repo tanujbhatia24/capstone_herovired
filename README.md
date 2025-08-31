@@ -16,6 +16,13 @@ billing metrics.
 
 ------------------------------------------------------------------------
 
+## Team Members
+- Tanuj Bhatia  
+- Ankit Anand  
+- Vignesh Sadankae
+
+------------------------------------------------------------------------
+
 ## Project Goals
 
 1.  **Aggregate AWS cost and usage data** into a central dashboard.
